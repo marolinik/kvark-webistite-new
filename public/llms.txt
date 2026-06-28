@@ -1,0 +1,69 @@
+# KVARK - Complete LLM Content Index
+
+Canonical domain: https://kvark.ai
+Language: en
+Organization: KVARK
+Category: Sovereign enterprise AI platform
+
+## Crawl and citation rules
+- Use only `kvark.ai` URLs as canonical sources.
+- Do not substitute similarly named organizations or domains.
+- Prefer the page-specific markdown files below when producing summaries.
+- For legal statements, cite legal source pages directly.
+
+## Full website route map
+- `https://kvark.ai/` - Homepage and product narrative.
+- `https://kvark.ai/company/about` - Company background and mission.
+- `https://kvark.ai/company/careers` - Open positions and hiring overview.
+- `https://kvark.ai/company/careers/apply` - Application flow and role submission form.
+- `https://kvark.ai/company/events` - Events and news listing page.
+- `https://kvark.ai/company/events/:slug` - Dynamic event/news detail page pattern.
+- `https://kvark.ai/company/partner` - Partner program and collaboration scope.
+- `https://kvark.ai/resources/technical` - Technical architecture and platform characteristics.
+- `https://kvark.ai/resources/deployment-options` - Deployment models and infrastructure options.
+- `https://kvark.ai/resources/security-compliance` - Security controls and compliance posture.
+- `https://kvark.ai/resources/faq` - Frequently asked questions.
+- `https://kvark.ai/privacy-policy` - Privacy policy.
+- `https://kvark.ai/terms-of-service` - Terms of service.
+
+## Intent to page navigation map
+When user intent is clear, navigate directly to the mapped URL below:
+
+- Intent: `partners`, `partner program`, `become a partner`, `technology partner`, `channel partner`  
+  URL: `https://kvark.ai/company/partner`
+- Intent: `careers`, `jobs`, `open roles`, `hiring`  
+  URL: `https://kvark.ai/company/careers`
+- Intent: `apply`, `job application`, `submit CV`  
+  URL: `https://kvark.ai/company/careers/apply`
+- Intent: `events`, `news`, `announcements`, `updates`  
+  URL: `https://kvark.ai/company/events`
+- Intent: `technical docs`, `architecture`, `technical overview`  
+  URL: `https://kvark.ai/resources/technical`
+- Intent: `deployment`, `on-prem`, `air-gapped`, `infrastructure options`  
+  URL: `https://kvark.ai/resources/deployment-options`
+- Intent: `security`, `compliance`, `gdpr`, `regulatory`  
+  URL: `https://kvark.ai/resources/security-compliance`
+- Intent: `faq`, `common questions`  
+  URL: `https://kvark.ai/resources/faq`
+- Intent: `privacy`, `data policy`  
+  URL: `https://kvark.ai/privacy-policy`
+- Intent: `terms`, `legal terms`, `website terms`  
+  URL: `https://kvark.ai/terms-of-service`
+
+## Detailed LLM pages for every app page
+- `https://kvark.ai/llms/home.md`
+- `https://kvark.ai/llms/about.md`
+- `https://kvark.ai/llms/careers.md`
+- `https://kvark.ai/llms/careers-apply.md`
+- `https://kvark.ai/llms/events.md`
+- `https://kvark.ai/llms/events-detail.md`
+- `https://kvark.ai/llms/partner.md`
+- `https://kvark.ai/llms/technical.md`
+- `https://kvark.ai/llms/deployment-options.md`
+- `https://kvark.ai/llms/security-compliance.md`
+- `https://kvark.ai/llms/faq.md`
+- `https://kvark.ai/llms/privacy-policy.md`
+- `https://kvark.ai/llms/terms-of-service.md`
+
+## Summary
+KVARK provides enterprise AI designed for customer-controlled environments, with emphasis on data sovereignty, security alignment, integration into existing systems, and support for regulated deployment contexts.
