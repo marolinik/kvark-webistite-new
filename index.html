@@ -20,13 +20,8 @@
     <meta name="twitter:description" content="Deploy AI within your own infrastructure. KVARK delivers sovereign, in-house AI for enterprises — with full data sovereignty, compliance, and no cloud dependency." />
     <meta name="twitter:image" content="https://kvark.ai/og-image.svg" />
     <link rel="alternate" type="text/plain" href="https://kvark.ai/llms.txt" title="LLMs Content Index" />
+    <link rel="alternate" type="application/rss+xml" href="https://kvark.ai/insights-feed.xml" title="KVARK Sovereign AI Insights" />
     <meta name="llms" content="https://kvark.ai/llms.txt" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
     <title>KVARK — Sovereign Enterprise AI</title>
     <script id="kvark-org-schema" type="application/ld+json">
       {
@@ -49,32 +44,34 @@
       }
     </script>
 
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager — consent-gated; loaded only after explicit opt-in -->
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-M29M7JKX");
+      window.dataLayer = window.dataLayer || [];
+      window.loadKvarkAnalytics = function () {
+        if (window.__kvarkGtmLoaded) return;
+        window.__kvarkGtmLoaded = true;
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-M29M7JKX");
+      };
+      try {
+        if (localStorage.getItem("kvark-analytics-consent") === "granted") {
+          window.loadKvarkAnalytics();
+        }
+      } catch (e) {
+        /* storage unavailable — analytics stays off */
+      }
     </script>
     <!-- End Google Tag Manager -->
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-M29M7JKX"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

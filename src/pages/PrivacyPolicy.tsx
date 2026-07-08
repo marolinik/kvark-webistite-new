@@ -19,9 +19,9 @@ function PrivacyPolicy() {
         />
 
         <div className="flex flex-col gap-4 mb-6 w-full text-center px-4 lg:px-40">
-          <h2 className="text-[2.5rem] lg:text-[3.5rem] font-normal leading-[100%] text-neutral-900">
+          <h1 className="text-[2.5rem] lg:text-[3.5rem] font-normal leading-[100%] text-neutral-900">
             Privacy Policy for KVARK
-          </h2>
+          </h1>
           <p className="text-sm lg:text-base text-neutral-500">
             Last updated: December 23, 2025
           </p>
@@ -65,16 +65,18 @@ function PrivacyPolicy() {
                 collect, use, store, and protect personal information when you
                 interact with{" "}
                 <a
-                  href="http://kvark.ai"
+                  href="https://kvark.ai"
                   className="text-primary hover:text-primary-end transition-colors"
                 >
-                  http://kvark.ai
+                  https://kvark.ai
                 </a>{" "}
                 (the "Website") or communicate with us.
               </p>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
-                By using the Website or contacting us, you agree to the
-                practices described in this Privacy Policy.
+                Where our processing relies on consent — such as analytics or
+                marketing communications — we ask for that consent explicitly
+                and separately, and you may withdraw it at any time. Browsing
+                the Website alone is never treated as consent.
               </p>
             </div>
 
@@ -84,8 +86,9 @@ function PrivacyPolicy() {
                 1. Information We Collect
               </h3>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
-                We only collect personal data that you voluntarily provide to
-                us.
+                We collect personal data that you voluntarily provide to us,
+                and — only if you have consented — the limited usage data
+                described in the Cookies &amp; Analytics section below.
               </p>
               <h4 className="text-lg lg:text-xl font-semibold text-neutral-900 mt-4">
                 Personal Information
@@ -163,19 +166,22 @@ function PrivacyPolicy() {
                 profiling.
               </p>
               <h4 className="text-lg lg:text-xl font-semibold text-neutral-900 mt-6">
+                Demo and Contact Requests
+              </h4>
+              <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
+                Details submitted through our demo request or contact forms are used solely to respond to your enquiry, arrange your demonstration, and share the materials you request. They are not added to newsletters or marketing lists without your separate, explicit consent.
+              </p>
+              <h4 className="text-lg lg:text-xl font-semibold text-neutral-900 mt-6">
                 New Offers
               </h4>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
-                We also use your personal data to inform you about the latest offers, special deals, and other products or services that we believe may be of interest to you. The legal basis for processing is your consent, which you may withdraw at any time.
+                Where you have given us separate consent to do so, we may use your personal data to inform you about the latest offers and other products or services that we believe may be of interest to you. You may withdraw this consent at any time.
               </p>
               <h4 className="text-lg lg:text-xl font-semibold text-neutral-900 mt-6">
                 Marketing Activities
               </h4>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
-                We use your data for marketing purposes. These activities include the following: Using your contact details to regularly send you updates about products and services. You may quickly and easily unsubscribe from marketing emails at any time by simply clicking the "Unsubscribe" link. The legal basis for processing is your consent, which you may withdraw at any time.
-              </p>
-              <p className="text-base lg:text-lg text-neutral-700 leading-relaxed mt-4">
-                Based on your data, you may be shown personalized offers on the Website, in mobile applications, or on third-party websites/applications (including social networks), and the content of the Website displayed to you may be personalized. These may include offers that you can book directly through the Website or advertisers' websites, as well as offers or products from third parties that we believe may be of interest to you.
+                Only where you have given us separate marketing consent, we may use your contact details to send you updates about products and services. You may quickly and easily unsubscribe from marketing emails at any time by clicking the "Unsubscribe" link. The legal basis for processing is your consent, which you may withdraw at any time.
               </p>
               <h4 className="text-lg lg:text-xl font-semibold text-neutral-900 mt-6">
                 Communication with you
@@ -187,10 +193,42 @@ function PrivacyPolicy() {
                 Legal Purposes
               </h4>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
-                Finally, in certain cases we may use your data to process and resolve legal disputes, for investigation and compliance purposes, to enforce the terms of use of the online reservation service, or to respond to lawful requests from public authorities. The legal basis for processing is our legitimate interest.
+                Finally, in certain cases we may use your data to process and resolve legal disputes, for investigation and compliance purposes, to enforce the terms of use of our services, or to respond to lawful requests from public authorities. The legal basis for processing is our legitimate interest.
               </p>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed mt-4">
                 Exceptionally, we may retain your data even after the withdrawal of consent or the fulfillment of the purpose, in situations where this is necessary for the performance of our legal obligations or for the establishment, exercise, or defense of legal claims.
+              </p>
+            </div>
+
+            {/* Cookies & Analytics */}
+            <div className="space-y-4">
+              <h3 className="text-xl lg:text-2xl font-semibold text-neutral-900">
+                Cookies &amp; Analytics
+              </h3>
+              <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
+                The Website uses one analytics tool, Google Tag Manager, to
+                understand how the Website is used (pages visited, interactions
+                with page elements, and approximate, non-precise location
+                derived from your IP address). This tool is <strong>disabled by
+                default</strong> and is loaded only after you explicitly allow
+                it through the consent notice shown on your first visit. The
+                legal basis for this processing is your consent (GDPR Art.
+                6(1)(a)).
+              </p>
+              <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
+                Your choice is stored in your browser's local storage under the
+                key <code>kvark-analytics-consent</code> so we do not ask you
+                again on each visit. No analytics cookies or identifiers are
+                set before you consent. You may withdraw your consent at any
+                time — withdrawing is as easy as granting it — by using the
+                "Cookie settings" link in the Website footer, which reopens the
+                consent notice, or by clearing your browser's site data for
+                kvark.ai. After withdrawal, the analytics tool is no longer
+                loaded.
+              </p>
+              <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
+                Analytics data is processed in aggregate to improve the Website
+                and is not used to build individual marketing profiles.
               </p>
             </div>
 
@@ -220,13 +258,13 @@ function PrivacyPolicy() {
                 5. Recipient or group of recipients
               </h3>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
-                Your personal data is shared internally within the company for the purpose of providing the services we offer. By accepting the Terms and Services, you acknowledge and agree that our partners may also use certain of your personal data.
+                Your personal data is shared internally within the company for the purpose of providing the services we offer. Where a service provider processes personal data on our behalf, it does so under a data processing agreement and only on our documented instructions.
               </p>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
                 We may also share your personal data with the following recipients:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-base lg:text-lg text-neutral-700">
-                <li>Subcontractors, external consultants, lawyers, accountants, business banks, courier services, research and marketing agencies</li>
+                <li>Subcontractors and external consultants, lawyers, accountants and business banks, strictly where needed to deliver our services or meet legal obligations</li>
                 <li>Information technology service providers, such as cloud providers, hosting companies, customer support services, chat services, or software companies</li>
                 <li>A newly established entity or an acquiring entity, in the event the KVARK is involved in a merger, acquisition, sale of shares, or any other corporate restructuring</li>
                 <li>Any other recipient where we are required to do so by law or by a court decision</li>
@@ -329,7 +367,7 @@ function PrivacyPolicy() {
                 <div>
                   <h4 className="text-lg font-semibold text-neutral-900 mb-2">RIGHT TO DATA PORTABILITY</h4>
                   <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
-                    If you wish (i) to receive the personal data you provided to us during registration in a structured, commonly used, and machine-readable format, or (ii) to have us transfer the personal data you provided to another controller, you have the right to request this from us, provided that the processing is based on consent or a contract and is carried out by automated means.
+                    If you wish (i) to receive the personal data you provided to us in a structured, commonly used, and machine-readable format, or (ii) to have us transfer the personal data you provided to another controller, you have the right to request this from us, provided that the processing is based on consent or a contract and is carried out by automated means.
                   </p>
                 </div>
                 <div>
@@ -362,7 +400,7 @@ function PrivacyPolicy() {
                 We will respond to your request as soon as possible, and no later than within 30 days from the date of receipt of the request. In the event of complexity or a large number of requests, we may require additional time to respond. This period may not exceed 90 days, and you will be informed accordingly.
               </p>
               <p className="text-base lg:text-lg text-neutral-700 leading-relaxed">
-                If your request is manifestly unfounded or excessively repetitive, we may refuse to act on the request or charge a fee for fulfilling it. A request is considered repetitive if you submit a request to exercise the same right more than once within a single year. If you contact us two or more times within one year regarding the same right, we will respond to your request only if you have a justified reason.
+                In line with Article 12(5) GDPR, where a request is manifestly unfounded or excessive — in particular because of its repetitive character — we may either charge a reasonable fee based on the administrative cost of responding, or refuse to act on the request. In that case we will explain why we consider the request manifestly unfounded or excessive.
               </p>
             </div>
 
@@ -422,10 +460,10 @@ function PrivacyPolicy() {
                 <p className="text-base lg:text-lg text-neutral-700">
                   <span className="font-semibold">Website:</span>{" "}
                   <a
-                    href="http://kvark.ai"
+                    href="https://kvark.ai"
                     className="text-primary hover:text-primary-end transition-colors"
                   >
-                    http://kvark.ai
+                    https://kvark.ai
                   </a>
                 </p>
               </div>

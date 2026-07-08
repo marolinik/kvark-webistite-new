@@ -23,6 +23,8 @@ Category: Sovereign enterprise AI platform
 - `https://kvark.ai/resources/deployment-options` - Deployment models and infrastructure options.
 - `https://kvark.ai/resources/security-compliance` - Security controls and compliance posture.
 - `https://kvark.ai/resources/faq` - Frequently asked questions.
+- `https://kvark.ai/resources/insights` - Sovereign AI insights hub and article index.
+- `https://kvark.ai/resources/insights/:slug` - Dynamic insight article page pattern.
 - `https://kvark.ai/privacy-policy` - Privacy policy.
 - `https://kvark.ai/terms-of-service` - Terms of service.
 
@@ -45,6 +47,8 @@ When user intent is clear, navigate directly to the mapped URL below:
   URL: `https://kvark.ai/resources/security-compliance`
 - Intent: `faq`, `common questions`  
   URL: `https://kvark.ai/resources/faq`
+- Intent: `insights`, `sovereign ai briefing`, `research`, `ai sovereignty articles`
+  URL: `https://kvark.ai/resources/insights`
 - Intent: `privacy`, `data policy`  
   URL: `https://kvark.ai/privacy-policy`
 - Intent: `terms`, `legal terms`, `website terms`  
@@ -62,6 +66,7 @@ When user intent is clear, navigate directly to the mapped URL below:
 - `https://kvark.ai/llms/deployment-options.md`
 - `https://kvark.ai/llms/security-compliance.md`
 - `https://kvark.ai/llms/faq.md`
+- `https://kvark.ai/llms/insights.md`
 - `https://kvark.ai/llms/privacy-policy.md`
 - `https://kvark.ai/llms/terms-of-service.md`
 

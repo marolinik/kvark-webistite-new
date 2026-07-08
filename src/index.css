@@ -42,6 +42,34 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keep anchored headings clear of the floating navbar */
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -118,6 +146,11 @@ body {
     rgba(29, 87, 255, 0.12) 100%
   );
   background-color: #ffffff;
+}
+
+/* Hide the outdated "+30 other connectors" vector text; replaced by a foreignObject label */
+#other-item > path {
+  display: none;
 }
 
 /* Deployment button hover */

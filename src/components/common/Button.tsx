@@ -31,7 +31,7 @@ function Button({
 
   return (
     <button
-      className={`font-normal w-max transition-colors flex items-center justify-center gap-2.5 rounded-[3.75rem] ${
+      className={`font-normal w-max transition-colors flex items-center justify-center gap-2.5 rounded-[3.75rem] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-end disabled:pointer-events-none ${
         variantClasses[variant]
       } ${sizeClasses[size]} ${
         disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer"

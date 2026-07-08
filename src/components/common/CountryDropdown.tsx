@@ -42,6 +42,9 @@ const CountryDropdownComponent = (
   const [searchQuery, setSearchQuery] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const baseId = name || "country";
+  const listboxId = `${baseId}-listbox`;
+  const searchId = `${baseId}-search`;
 
   // Filter countries
   const filteredCountries = countries.all
@@ -111,8 +114,12 @@ const CountryDropdownComponent = (
         name={name}
         onClick={handleToggle}
         disabled={disabled}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-controls={open ? listboxId : undefined}
+        aria-invalid={error || undefined}
         style={{ WebkitAppearance: "none", MozAppearance: "none" }}
-        className={`h-10 lg:h-13 font-medium text-sm lg:text-base leading-[100%] placeholder:text-neutral-300 px-3 lg:px-5 py-2 lg:py-4 rounded-xl border w-full shadow-form-input flex items-center justify-between gap-2 bg-transparent ${error ? "border-red-500" : "border-neutral-100"
+        className={`h-10 lg:h-13 font-medium text-sm lg:text-base leading-[100%] placeholder:text-neutral-300 px-3 lg:px-5 py-2 lg:py-4 rounded-xl border w-full shadow-form-input flex items-center justify-between gap-2 bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-end ${error ? "border-red-500" : "border-neutral-100"
           } ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} ${!selectedCountry ? "text-neutral-300" : "text-neutral-900"
           }`}
       >
@@ -151,24 +158,33 @@ const CountryDropdownComponent = (
         <div className="absolute z-50 w-full mt-2 bg-neutral-0 border border-neutral-100 rounded-xl shadow-lg overflow-hidden">
           <div className="sticky top-0 z-10 bg-neutral-0 border-b border-neutral-100 p-3">
             <input
+              id={searchId}
               ref={inputRef}
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search country..."
+              placeholder="Search country"
+              aria-label="Search country"
               className="w-full px-3 py-2 text-sm border border-neutral-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
           </div>
 
-          <div className="max-h-[200px] sm:max-h-[270px] overflow-y-auto">
+          <div
+            id={listboxId}
+            role="listbox"
+            aria-label="Countries"
+            className="max-h-[200px] sm:max-h-[270px] overflow-y-auto"
+          >
             {filteredCountries.length > 0 ? (
               <div className="py-1">
                 {filteredCountries.map((country: Country) => (
                   <button
                     key={country.alpha2}
                     type="button"
+                    role="option"
+                    aria-selected={selectedCountry?.alpha2 === country.alpha2}
                     onClick={() => handleSelect(country)}
-                    className="w-full flex items-center gap-3 px-3 lg:px-5 py-2.5 hover:bg-neutral-50 transition-colors cursor-pointer"
+                    className="w-full flex items-center gap-3 px-3 lg:px-5 py-2.5 hover:bg-neutral-50 transition-colors cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary-end"
                   >
                     <div className="inline-flex items-center justify-center w-5 h-5 shrink-0 overflow-hidden rounded-full">
                       <CircleFlag

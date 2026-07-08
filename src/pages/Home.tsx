@@ -1,8 +1,16 @@
 /* Sections */
 import HeroSection from "@/components/modules/HeroSection";
+import TrustBar from "@/components/modules/TrustBar";
+import ChallengesSection from "@/components/modules/ChallengesSection";
 import FeaturesSection from "@/components/modules/FeaturesSection";
-import UseCasesSection from "@/components/modules/UseCasesSection";
-import CostComplianceControlSection from "@/components/modules/AdvantagesSection";
+import ProductProofSection from "@/components/modules/ProductProofSection";
+import GovernanceSection from "@/components/modules/GovernanceSection";
+import IndustriesSection from "@/components/modules/IndustriesSection";
+import CaseStudySection from "@/components/modules/CaseStudySection";
+import TcoSection from "@/components/modules/TcoSection";
+import DeploymentSection from "@/components/modules/DeploymentSection";
+import FaqSection from "@/components/modules/FaqSection";
+import InsightsSection from "@/components/modules/InsightsSection";
 import DemoSection from "@/components/modules/DemoSection";
 
 import { useLocation } from "react-router-dom";
@@ -30,9 +38,17 @@ function Home() {
   return (
     <>
       <HeroSection />
+      <TrustBar />
+      <ChallengesSection />
       <FeaturesSection />
-      <CostComplianceControlSection />
-      <UseCasesSection />
+      <ProductProofSection />
+      <GovernanceSection />
+      <IndustriesSection />
+      <CaseStudySection />
+      <TcoSection />
+      <DeploymentSection />
+      <FaqSection />
+      <InsightsSection />
       <DemoSection />
     </>
   );

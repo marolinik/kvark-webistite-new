@@ -104,17 +104,37 @@ function MiniNavbar() {
           {/* Header Bar */}
           <div className="w-full bg-white border border-neutral-50 rounded-xl p-3 shadow-navbar flex items-center justify-between">
             <Link to="/" onClick={handleLogoClick}>
-              <img src={logo} alt="KVARK logo" className="w-full h-full" />
+              <img
+                src={logo}
+                alt="KVARK logo"
+                width={109}
+                height={24}
+                className="w-full h-full"
+              />
             </Link>
 
             <div className="flex items-center gap-2">
+              <Button
+                variant="secondary"
+                size="small"
+                onClick={handleDemoClick}
+                className="!h-9 px-4"
+              >
+                Request a Demo
+              </Button>
               <button
                 type="button"
                 onClick={handleMenuToggle}
                 className="cursor-pointer p-1 hover:opacity-70 transition-opacity"
                 aria-label="Toggle menu"
               >
-                <img src={menuIcon} alt="Open navigation menu" className="w-6 h-6" />
+                <img
+                  src={menuIcon}
+                  alt="Open navigation menu"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
               </button>
             </div>
           </div>
@@ -233,6 +253,17 @@ function MiniNavbar() {
                   {resourcesOpen && (
                     <div className="bg-neutral-25 px-4 pb-3 pt-2 flex flex-col gap-2 mx-4 my-2 rounded-lg">
                       <Link
+                        to="/resources/insights"
+                        className="cursor-pointer group flex gap-2 items-center text-sm lg:text-base text-neutral-900 hover:text-primary-start transition-colors py-2"
+                        onClick={() => { setResourcesOpen(false); setMenuOpen(false); pushEvent({ event: "nav_click", link_name: "Insights" }); }}
+                      >
+                        <span>Sovereign AI Insights</span>
+                        <CaretRightIcon
+                          size={16}
+                          className="text-neutral-400 group-hover:text-primary-start"
+                        />
+                      </Link>
+                      <Link
                         to="/resources/technical"
                         className="cursor-pointer group flex gap-2 items-center text-sm lg:text-base text-neutral-900 hover:text-primary-start transition-colors py-2"
                         onClick={() => { setResourcesOpen(false); setMenuOpen(false); pushEvent({ event: "nav_click", link_name: "Technical Documentation" }); }}
@@ -289,7 +320,7 @@ function MiniNavbar() {
                       onClick={handleDemoClick}
                       className="w-full justify-center"
                     >
-                      Request a demo
+                      Request a Demo
                     </Button>
                   </div>
                 </div>

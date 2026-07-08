@@ -21,11 +21,11 @@ const featuresConfig: Feature[] = [
     title: "AI assistant",
     icon: aiAssistantIcon,
     expandedTitle: "Your entire organization, one intelligent interface",
-    expandedDescription: "Chat with your data across systems, documents, emails, and messages-accessing accurate insights in a fully secure, controlled environment.",
+    expandedDescription: "Chat with your data across systems, documents, emails, and messages — accessing accurate insights in a fully secure, controlled environment.",
   },
   {
     id: "semantic-searching",
-    title: "Semantic searching",
+    title: "Semantic search",
     icon: semanticSearchingIcon,
     expandedTitle: "Move beyond basic text search",
     expandedDescription: "Semantic search delivers context-aware retrieval and precise filtering across all organizational data, no matter the format or source.",
@@ -35,28 +35,28 @@ const featuresConfig: Feature[] = [
     title: "Document drafting",
     icon: documentDraftingIcon,
     expandedTitle: "Accelerate how your teams create documents",
-    expandedDescription: "Combine your internal data, established templates, and AI-powered refinement to generate polished, reliable content securely and efficiently.",
+    expandedDescription: "Combine your internal data, established templates, and AI-assisted refinement to produce source-grounded documents — drafted, reviewed and approved inside your perimeter.",
   },
   {
     id: "limitless-context",
-    title: "Limitless context",
+    title: "Context boards",
     icon: limitlessContextIcon,
     expandedTitle: "Break free from limited context windows",
-    expandedDescription: "The limitless Context Board connects semantic search, AI assistance, and drafting into a single intelligence layer, enabling the system to reason over more information and deliver precise, high-fidelity outputs.",
+    expandedDescription: "Context Boards connect semantic search, AI assistance, and drafting into a single intelligence layer, enabling the system to reason over more information and deliver precise, high-fidelity outputs.",
   },
   {
     id: "enterprise-agents",
-    title: "Enterprise Agents",
+    title: "Enterprise agents",
     icon: enterpriseAgentsIcon,
     expandedTitle: "Enhance operational efficiency with secure, supervised AI-automation",
     expandedDescription: "Enterprise Agents connect to your systems, act on trusted information, and streamline operations while keeping a human in the loop for full control and assurance.",
   },
   {
     id: "service-externalization",
-    title: "Service externalization",
+    title: "Customer-facing AI",
     icon: serviceExternalizationIcon,
     expandedTitle: "Empower your clients with intelligent self-service",
-    expandedDescription: "Deploy public-facing agents across digital channels to streamline customer interactions and drive top-line growth-without sacrificing governance or oversight.",
+    expandedDescription: "Deploy public-facing agents across digital channels to resolve customer queries — with the same permissions, governance and audit trail as everything else.",
   },
 ];
 
@@ -241,6 +241,8 @@ const ExpandedContent = ({
             <img
               src={feature.icon}
               alt={feature.title}
+              width={32}
+              height={32}
               className="w-8 h-8"
             />
           </div>
@@ -262,7 +264,7 @@ const ExpandedContent = ({
   );
 };
 
-const FeaturesContent = ({ className }: { className?: string }) => {
+const FeaturesContent = ({ className = "" }: { className?: string }) => {
   const [activeFeatureId, setActiveFeatureId] = useState<string | null>(
     featuresConfig[0]?.id || null
   );

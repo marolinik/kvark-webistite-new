@@ -16,6 +16,36 @@
     <loc>https://kvark.ai/resources/security-compliance</loc>
   </url>
   <url>
+    <loc>https://kvark.ai/resources/insights</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/sovereign-ai-briefing-july-2026</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/the-sovereignty-test</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/eu-ai-act-after-the-omnibus</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/open-weight-models-mid-2026</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/nis2-dora-enterprise-ai</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/inference-time-residency</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/air-gapped-ai-architecture</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/permission-aware-rag</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/resources/insights/on-premise-ai-tco</loc>
+  </url>
+  <url>
     <loc>https://kvark.ai/company/about</loc>
   </url>
   <url>
@@ -44,6 +74,9 @@
   </url>
   <url>
     <loc>https://kvark.ai/llms/home.md</loc>
+  </url>
+  <url>
+    <loc>https://kvark.ai/llms/insights.md</loc>
   </url>
   <url>
     <loc>https://kvark.ai/llms/about.md</loc>

@@ -5,6 +5,7 @@ import Footer from "@/layout/Footer";
 import MiniNavbar from "@/layout/MiniNavbar";
 import heroBackgroundTop from "@/assets/backgrounds/hero-background-top.png";
 import SeoManager from "@/components/SeoManager";
+import ConsentBanner from "@/components/ConsentBanner";
 
 function AppLayout() {
   const location = useLocation();
@@ -24,6 +25,8 @@ function AppLayout() {
         <img
           src={heroBackgroundTop}
           alt="glowing light at top"
+          width={1320}
+          height={482}
           className="w-full h-full object-contain"
         />
       </div>
@@ -33,6 +36,7 @@ function AppLayout() {
         <Outlet />
       </main>
       <Footer />
+      <ConsentBanner />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { getInsightBySlug } from "@/content/insights";
+
 const SITE_URL = "https://kvark.ai";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.svg`;
 
@@ -19,6 +21,13 @@ const routeMetaMap: Record<string, SeoMeta> = {
     description:
       "KVARK is a sovereign enterprise AI platform that enables organizations to deploy and operate AI entirely within their own infrastructure.",
     path: "/",
+    type: "website",
+  },
+  "/resources/insights": {
+    title: "Sovereign AI Insights — KVARK",
+    description:
+      "Evidence-first analysis for regulated enterprises: EU AI regulation timelines, open-weight models, air-gapped architecture, and the economics of in-house AI.",
+    path: "/resources/insights",
     type: "website",
   },
   "/resources/faq": {
@@ -127,6 +136,19 @@ export function getSeoMeta(pathname: string): SeoMeta {
     return routeMetaMap[pathname];
   }
 
+  if (pathname.startsWith("/resources/insights/")) {
+    const slug = pathname.replace("/resources/insights/", "");
+    const insight = getInsightBySlug(slug);
+    if (insight) {
+      return {
+        title: `${insight.title} — KVARK Insights`,
+        description: insight.excerpt,
+        path: pathname,
+        type: "article",
+      };
+    }
+  }
+
   if (pathname.startsWith("/company/events/")) {
     return {
       title: "Event Details — KVARK",
@@ -142,6 +164,45 @@ export function getSeoMeta(pathname: string): SeoMeta {
     description: globalSeo.defaultDescription,
     path: pathname,
     type: "website",
+  };
+}
+
+export function getArticleStructuredData(pathname: string) {
+  if (!pathname.startsWith("/resources/insights/")) {
+    return null;
+  }
+
+  const slug = pathname.replace("/resources/insights/", "");
+  const insight = getInsightBySlug(slug);
+  if (!insight) {
+    return null;
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: insight.title,
+    description: insight.excerpt,
+    datePublished: insight.dateISO,
+    dateModified: insight.dateISO,
+    articleSection: insight.category,
+    url: `${SITE_URL}${pathname}`,
+    mainEntityOfPage: `${SITE_URL}${pathname}`,
+    image: DEFAULT_OG_IMAGE,
+    author: {
+      "@type": "Organization",
+      name: "KVARK Research",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "KVARK",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/favico.svg`,
+      },
+    },
   };
 }
 

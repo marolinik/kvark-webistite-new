@@ -1,8 +1,10 @@
-import FeaturesContent from "@/components/FeaturesContent";
-import FeatureAnimation from "@/components/FeatureAnimation";
+import { lazy, Suspense } from "react";
 import DashedLine from "@/components/common/DashedLine";
 import CornerDot from "@/components/common/CornerDot";
 import FilledDot from "@/components/common/FilledDot";
+
+const FeaturesContent = lazy(() => import("@/components/FeaturesContent"));
+const FeatureAnimation = lazy(() => import("@/components/FeatureAnimation"));
 
 const FeatureBackground = () => {
   return (
@@ -37,22 +39,40 @@ function FeaturesSection() {
   return (
     <section
       id="features"
-      className="relative h-auto lg:h-screen w-full px-4 lg:px-20 pb-4 lg:pb-8 pt-14 lg:pt-20"
+      className="relative h-auto lg:min-h-screen w-full px-4 lg:px-20 pb-4 lg:pb-8 pt-14 lg:pt-20"
     >
       <FeatureBackground />
       {/* Features Container */}
       <div className="relative h-full flex flex-col items-center justify-center gap-10">
         <div className="flex flex-col items-center text-center gap-5 w-full pb-8 max-w-7xl mx-auto">
+          <span className="text-xs lg:text-sm font-medium tracking-[0.2em] uppercase text-primary-end">
+            Platform
+          </span>
           <h2 className="text-[2.5rem] lg:text-[3.5rem] font-normal text-neutral-900 leading-[112%]">
-            AI at the Core of Your Organization
+            One platform. Every layer under your control.
           </h2>
           <p className="text-sm lg:text-base text-neutral-500 font-normal leading-[150%]">
-            We're building Enterprise AI platform that runs on-premise, respects every permission, and enables full use of AI without compromising data security or privacy.
+            Assistant, semantic search, document drafting and enterprise agents — connected to your systems through 20+ prebuilt connectors, grounded in your data by hybrid retrieval, and governed by a single operations layer.
           </p>
         </div>
         {/* Feature Animation */}
-        <FeatureAnimation className="hidden lg:block" />
-        <FeaturesContent className="block lg:hidden" />
+        <Suspense
+          fallback={
+            <div className="hidden lg:block h-[34rem] w-full" aria-hidden />
+          }
+        >
+          <FeatureAnimation className="hidden lg:block" />
+        </Suspense>
+        <div id="features-mobile" className="block lg:hidden w-full">
+          <Suspense fallback={<div className="h-96 w-full" aria-hidden />}>
+            <FeaturesContent />
+          </Suspense>
+        </div>
+        <p className="text-xs lg:text-sm text-neutral-400 text-center max-w-2xl -mt-4 lg:-mt-6">
+          Cloud model providers shown are optional, reached only through the
+          governed LLM gateway where your policy allows — local open-weight
+          models are the default.
+        </p>
       </div>
     </section>
   );

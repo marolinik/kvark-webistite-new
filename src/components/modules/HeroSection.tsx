@@ -1,9 +1,8 @@
 import { scrollToSection } from "@/utils/scrollToSection";
 import { pushEvent } from "@/utils/gtm";
 import { useNavigate } from "react-router-dom";
-import Lottie from "lottie-react";
-import heroAnimation from "@/assets/animations/hero-animation.json";
 import Button from "@/components/common/Button";
+import HeroVisual from "@/components/modules/HeroVisual";
 import DashedLine from "@/components/common/DashedLine";
 import CornerDot from "@/components/common/CornerDot";
 import FilledDot from "@/components/common/FilledDot";
@@ -28,6 +27,13 @@ const HeroBackground = () => {
   );
 };
 
+const proofPoints = [
+  "In production at a national export-credit agency",
+  "European Tier-1 bank pilot underway",
+  "86% lower 5-year TCO vs cloud (reference config)",
+  "20+ prebuilt connectors",
+];
+
 function HeroSection() {
   const navigate = useNavigate();
 
@@ -41,46 +47,74 @@ function HeroSection() {
     });
   };
 
+  const handleHowItWorksClick = () => {
+    pushEvent({ event: "cta_click", button_name: "explore_platform", location: "hero" });
+    scrollToSection({
+      sectionId: "features",
+      navigate,
+      targetPath: "/",
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <section className="relative h-auto lg:h-screen w-full px-4 lg:px-20 pb-4 lg:pb-8">
+    <section className="relative w-full px-4 lg:px-20 pb-12 lg:pb-16">
       <HeroBackground />
       {/* Hero Container */}
-      <div className="h-full flex flex-col lg:flex-row items-center pt-20 lg:pt-28 gap-20 lg:gap-0">
-        {/* Left side - Text content */}
-        <div className="w-full lg:w-1/2 px-2 flex flex-col items-start justify-center gap-10 order-2 lg:order-1">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-[2.5rem] lg:text-[3.5rem] font-medium text-neutral-900 leading-[92%]">
-              <span
-                className="bg-clip-text text-transparent uppercase text-[4rem] lg:text-8xl"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(90deg, #0526AA 0%, #020617 95.00%)",
-                }}
-              >
-                Kvark
-              </span>
-              <br />
-              On-premise <br />
-              Enterprise AI Factory
+      <div className="flex flex-col lg:flex-row items-center pt-24 lg:pt-32 gap-12 lg:gap-0">
+        {/* Left side - Text content (value proposition first on mobile) */}
+        <div className="w-full lg:w-1/2 px-2 flex flex-col items-start justify-center gap-8 order-1">
+          <div className="flex flex-col gap-5">
+            <span className="text-[0.65rem] lg:text-xs font-medium tracking-[0.18em] uppercase text-neutral-500">
+              Sovereign by deployment · Governed by design · Agentic in operation
+            </span>
+            <h1 className="text-[2.75rem] lg:text-[4rem] font-medium text-neutral-900 leading-[105%]">
+              Enterprise AI that{" "}
+              <span className="text-primary-end">never leaves your walls</span>
             </h1>
-            <p className="lg:pr-12 text-sm lg:text-base text-neutral-500 font-normal">
-              The sovereign AI platform for enterprises that require control, compliance, and complete data ownership.
+            <p className="lg:pr-12 text-sm lg:text-base text-neutral-500 font-normal leading-[160%]">
+              KVARK is the sovereign agentic AI platform for regulated
+              industries — deployed on-premise or fully air-gapped, aligned
+              with the EU AI Act, GDPR, NIS2 and DORA. Built and operated in
+              Europe.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 items-start">
+          <div className="w-full sm:w-auto flex flex-col sm:flex-row gap-4 items-stretch sm:items-start [&>button]:w-full sm:[&>button]:w-max">
             <Button variant="primary" size="medium" onClick={handleDemoClick}>
               Request a Demo
             </Button>
+            <Button
+              variant="outline"
+              size="medium"
+              onClick={handleHowItWorksClick}
+            >
+              Explore the Platform
+            </Button>
           </div>
+          {/* Proof strip */}
+          <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-x-6 gap-y-2.5 pt-1" aria-label="Proof points">
+            {proofPoints.map((point) => (
+              <li
+                key={point}
+                className="flex items-center gap-2 text-xs lg:text-sm text-neutral-500"
+              >
+                <span
+                  className="w-1.5 h-1.5 rounded-full shrink-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #031B77 0%, #0526AA 100%)",
+                  }}
+                  aria-hidden="true"
+                />
+                {point}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Right side - Lottie Animation */}
-        <div className="w-full lg:w-1/2 px-2 flex flex-col items-end justify-center gap-10 order-1 lg:order-2">
-          <Lottie
-            animationData={heroAnimation}
-            loop={true}
-            className="w-full h-full"
-          />
+        {/* Right side - Sovereign perimeter diagram */}
+        <div className="w-full lg:w-1/2 px-2 flex flex-col items-center lg:items-end justify-center order-2">
+          <HeroVisual />
         </div>
       </div>
     </section>

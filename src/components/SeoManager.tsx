@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { getFaqStructuredData, getSeoMeta, globalSeo } from "@/seo/routeMeta";
+import {
+  getArticleStructuredData,
+  getFaqStructuredData,
+  getSeoMeta,
+  globalSeo,
+} from "@/seo/routeMeta";
 
 function upsertMetaTag(attribute: "name" | "property", key: string, content: string) {
   let element = document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
@@ -96,6 +101,13 @@ export default function SeoManager() {
       upsertJsonLdScript("kvark-faq-schema", faqSchema);
     } else {
       removeJsonLdScript("kvark-faq-schema");
+    }
+
+    const articleSchema = getArticleStructuredData(location.pathname);
+    if (articleSchema) {
+      upsertJsonLdScript("kvark-article-schema", articleSchema);
+    } else {
+      removeJsonLdScript("kvark-article-schema");
     }
   }, [location.pathname]);
 

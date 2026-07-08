@@ -128,7 +128,13 @@ function Navbar() {
               onClick={handleLogoClick}
               onMouseEnter={closeDropdowns}
             >
-              <img src={logo} alt="KVARK logo" className="w-full h-full" />
+              <img
+                src={logo}
+                alt="KVARK logo"
+                width={109}
+                height={24}
+                className="w-full h-full"
+              />
             </Link>
 
             <ul className="flex items-center gap-1">
@@ -192,7 +198,7 @@ function Navbar() {
                   size="small"
                   onClick={handleDemoClick}
                 >
-                  Request a demo
+                  Request a Demo
                 </Button>
               </div>
             </div>
@@ -273,7 +279,17 @@ function Navbar() {
                 </div>
 
                 <div className="flex flex-col gap-3 min-w-45">
-
+                  <Link
+                    to="/resources/insights"
+                    className="cursor-pointer group flex items-center gap-2 text-sm lg:text-base text-neutral-900 hover:text-primary-start transition-colors"
+                    onClick={() => { setResourcesOpen(false); pushEvent({ event: "nav_click", link_name: "Insights" }); }}
+                  >
+                    <span>Sovereign AI Insights</span>
+                    <CaretRightIcon
+                      size={16}
+                      className="text-neutral-400 group-hover:text-primary-start transition-transform group-hover:translate-x-1"
+                    />
+                  </Link>
                   <Link
                     to="/resources/technical"
                     className="cursor-pointer group flex items-center gap-2 text-sm lg:text-base text-neutral-900 hover:text-primary-start transition-colors"

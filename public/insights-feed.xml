@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KVARK Sovereign AI Insights</title>
+    <link>https://kvark.ai/resources/insights</link>
+    <atom:link href="https://kvark.ai/insights-feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Evidence-first analysis for regulated enterprises: EU AI regulation timelines, open-weight models, air-gapped architecture, and the economics of in-house AI.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 07 Jul 2026 09:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Sovereign AI briefing — July 2026</title>
+      <link>https://kvark.ai/resources/insights/sovereign-ai-briefing-july-2026</link>
+      <guid>https://kvark.ai/resources/insights/sovereign-ai-briefing-july-2026</guid>
+      <pubDate>Tue, 07 Jul 2026 09:00:00 GMT</pubDate>
+      <description>The Digital Omnibus lands, sovereignty enters EU procurement law, Germany's BSI moves into active NIS2 auditing, and Gartner puts hard numbers on the sovereign cloud shift.</description>
+    </item>
+    <item>
+      <title>The sovereignty test: ten questions that separate sovereign AI from sovereign-washing</title>
+      <link>https://kvark.ai/resources/insights/the-sovereignty-test</link>
+      <guid>https://kvark.ai/resources/insights/the-sovereignty-test</guid>
+      <pubDate>Tue, 07 Jul 2026 08:00:00 GMT</pubDate>
+      <description>Every vendor claims sovereignty in 2026. Most claims collapse under ten questions a procurement team can ask in the first meeting.</description>
+    </item>
+    <item>
+      <title>The AI Act after the Omnibus: what moved to 2027 — and what still lands on 2 August 2026</title>
+      <link>https://kvark.ai/resources/insights/eu-ai-act-after-the-omnibus</link>
+      <guid>https://kvark.ai/resources/insights/eu-ai-act-after-the-omnibus</guid>
+      <pubDate>Sun, 05 Jul 2026 09:00:00 GMT</pubDate>
+      <description>The Digital Omnibus deferred high-risk obligations to 2027–28 — but 2 August 2026 still switches on GPAI penalties, transparency duties and market surveillance.</description>
+    </item>
+    <item>
+      <title>The open-weight menu in mid-2026: what enterprises can actually self-host</title>
+      <link>https://kvark.ai/resources/insights/open-weight-models-mid-2026</link>
+      <guid>https://kvark.ai/resources/insights/open-weight-models-mid-2026</guid>
+      <pubDate>Wed, 01 Jul 2026 09:00:00 GMT</pubDate>
+      <description>Frontier-class weights under MIT and Apache 2.0, European models in real production — a practitioner's map of the self-hosting landscape.</description>
+    </item>
+    <item>
+      <title>NIS2 and DORA stopped being theoretical: what live enforcement means for enterprise AI</title>
+      <link>https://kvark.ai/resources/insights/nis2-dora-enterprise-ai</link>
+      <guid>https://kvark.ai/resources/insights/nis2-dora-enterprise-ai</guid>
+      <pubDate>Fri, 26 Jun 2026 09:00:00 GMT</pubDate>
+      <description>Germany's NIS2 regime is live and BSI audits have begun; DORA's register cycle closed in March. What that means for AI platforms in scope.</description>
+    </item>
+    <item>
+      <title>Inference-time residency: why storage residency is a 2019 answer to a 2026 question</title>
+      <link>https://kvark.ai/resources/insights/inference-time-residency</link>
+      <guid>https://kvark.ai/resources/insights/inference-time-residency</guid>
+      <pubDate>Fri, 19 Jun 2026 09:00:00 GMT</pubDate>
+      <description>Jurisdiction follows the entity, not the datacenter — and AI moved the sensitive moment to inference.</description>
+    </item>
+    <item>
+      <title>Air-gap is an architecture, not a checkbox: what a fully disconnected AI stack actually requires</title>
+      <link>https://kvark.ai/resources/insights/air-gapped-ai-architecture</link>
+      <guid>https://kvark.ai/resources/insights/air-gapped-ai-architecture</guid>
+      <pubDate>Fri, 12 Jun 2026 09:00:00 GMT</pubDate>
+      <description>Most air-gap claims mean a firewall rule. A real disconnected LLM stack is eight subsystems and a supply chain.</description>
+    </item>
+    <item>
+      <title>Permission-aware retrieval: fixing the AI failure mode your DPO fears most</title>
+      <link>https://kvark.ai/resources/insights/permission-aware-rag</link>
+      <guid>https://kvark.ai/resources/insights/permission-aware-rag</guid>
+      <pubDate>Mon, 08 Jun 2026 09:00:00 GMT</pubDate>
+      <description>Why RAG breaks permission models by default, why post-hoc filtering fails, and what fail-closed retrieval-layer enforcement looks like.</description>
+    </item>
+    <item>
+      <title>The TCO of on-premise AI: when owned GPUs beat per-token pricing</title>
+      <link>https://kvark.ai/resources/insights/on-premise-ai-tco</link>
+      <guid>https://kvark.ai/resources/insights/on-premise-ai-tco</guid>
+      <pubDate>Fri, 05 Jun 2026 09:00:00 GMT</pubDate>
+      <description>Utilization economics, honest breakeven math, and what the cloud still wins at.</description>
+    </item>
+  </channel>
+</rss>

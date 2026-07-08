@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import logoLight from "@/assets/logo/logo_light.svg";
 import footerBackground from "@/assets/backgrounds/footer-background.png";
+import { OPEN_CONSENT_EVENT } from "@/components/ConsentBanner";
 
 function Footer() {
   const navigate = useNavigate();
@@ -26,7 +27,13 @@ function Footer() {
           <div className="lg:col-span-2 flex flex-col gap-6">
             <div className="flex items-center gap-3">
               <Link to="/">
-                <img src={logoLight} alt="KVARK" className="h-10" />
+                <img
+                  src={logoLight}
+                  alt="KVARK"
+                  width={182}
+                  height={40}
+                  className="h-10"
+                />
               </Link>
             </div>
             <p className="text-white/70 text-sm leading-relaxed max-w-md">
@@ -137,6 +144,14 @@ function Footer() {
               <ul className="flex flex-col gap-3">
                 <li>
                   <button
+                    onClick={() => handlePageClick("/resources/insights")}
+                    className="cursor-pointer text-white/70 hover:text-white text-sm transition-colors text-left"
+                  >
+                    Sovereign AI Insights
+                  </button>
+                </li>
+                <li>
+                  <button
                     onClick={() => handlePageClick("/resources/technical")}
                     className="cursor-pointer text-white/70 hover:text-white text-sm transition-colors text-left"
                   >
@@ -189,8 +204,17 @@ function Footer() {
             >
               Terms of Service
             </button>
+            <span className="text-white/30 hidden lg:inline">|</span>
+            <button
+              onClick={() =>
+                window.dispatchEvent(new Event(OPEN_CONSENT_EVENT))
+              }
+              className="cursor-pointer text-white/70 hover:text-white text-sm transition-colors"
+            >
+              Cookie settings
+            </button>
           </div>
-          <p className="text-white/70 text-sm">© 2025 Kvark. All rights reserved</p>
+          <p className="text-white/70 text-sm">© 2026 Kvark. All rights reserved</p>
         </div>
       </div>
     </footer>
